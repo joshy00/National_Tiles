@@ -34,3 +34,8 @@ password: user
 Important points:
 1. Passwords were decided to be stored in plain text as a proof of concept, and to allow verification/updating of passwords and directly seeing the results in the db. In a production environment, further steps (hashing and salting) would be taken.
 2. Other liberties were taken in the effort to allow transparency when viewing code and using application.
+
+
+
+#TODO: Collate all API calls in Services folder.
+#TODO: Remove repeat logic, tidy code
