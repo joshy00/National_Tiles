@@ -1,0 +1,171 @@
+/* Main container for the widget */
+/* Floating button style */
+/* Floating button style */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Widget container style */
+.widget-container {
+  position: fixed;
+  top: 80px;
+  right: -350px; /* Start off the screen */
+  width: 350px;
+  height: 80vh;
+  background: linear-gradient(135deg, rgba(255, 92, 92, 0.8), rgba(92, 92, 255, 0.8));
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+/* When the widget is visible, slide it in */
+.widget-container.show {
+  transform: translateX(-350px); /* Slide it into view */
+}
+
+/* Header style for the widget */
+.widget-header {
+  background-color: #292b2c;
+  padding: 3px 10px;
+  border-radius: 15px;
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Task List Style */
+.tasks-list {
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* Individual task widget */
+.task-widget {
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-widget:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Task title and details */
+.task-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.task-details {
+  font-size: 1rem;
+  color: #555;
+}
+
+.task-details strong {
+  color: #000;
+}
+
+.mark-completed-button {
+  display: block;  /* Ensure it stays below the text */
+  width: fit-content;
+  margin-top: 10px; /* Add space so it doesn’t touch the title */
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mark-completed-button:hover {
+  background-color: #218838;
+}
+.show-task-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #3b82f6; /* Blue */
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.show-task-button:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+}
+
+
+/* Add fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-in animation for the widget */
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Slide-out animation for completed task */
+@keyframes slideOut {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.create-task-button-inside-widget {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 16px;
+  background-color: #3b82f6; /* Blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.create-task-button-inside-widget:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+}
