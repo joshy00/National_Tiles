@@ -17,7 +17,7 @@ web-vitals@4.2.4
 
 How to use website:
 
-1. Run MySQL server.
+1. Run MySQL server using provided National_Tiles schema.
 2. Run db.py by using command "python db.py" in backend directory.
 3. Start frontend by using command "npm start" in frontend directory.
 ***Ports may need to be adjusted to ensure MySQL, backend, and frontend can communicate correctly.
