@@ -37,5 +37,4 @@ Important points:
 
 
 
-#TODO: Collate all API calls in Services folder.
-#TODO: Remove repeat logic, tidy code
+#TODO: Finish testing AuthContext and API branch to ensure stability.
