@@ -49,7 +49,7 @@ function Admin({ navbarItems, setNavbarItems }) {
             <div
               className="navbar-item-content"
               style={{
-                background: item.show ? "lightgreen" : "lightcoral", 
+                background: item.show ? "lightgreen" : "lightcoral",
               }}
             >
               <div>{item.title}</div>

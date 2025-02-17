@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import './Navbar.css'
+import { useAuth } from './AuthContext';
 
-
-function Navbar({ navbarItems, isLoggedIn, isAdmin, handleLogout }) {
+function Navbar({ navbarItems, handleLogout }) {
   const [isOpen, setIsOpen] = useState(false);
+  const { logout } = useAuth();
   const location = useLocation(); //Get the current location
 
   return (
@@ -18,7 +19,7 @@ function Navbar({ navbarItems, isLoggedIn, isAdmin, handleLogout }) {
             <Link
               key={index}
               to={item.path}
-              onClick={item.title === "Logout" ? handleLogout : null}
+              onClick={item.title === "Logout" ? logout : null}
               className={location.pathname === item.path && item.title !== 'Logout' ? 'active' : ''}
             >
               {item.title}
