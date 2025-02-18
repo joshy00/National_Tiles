@@ -37,4 +37,4 @@ Important points:
 
 
 
-#TODO: Finish testing AuthContext and API branch to ensure stability.
+#TODO: Code could be beautified a bit more.
