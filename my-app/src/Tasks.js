@@ -2,10 +2,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 import './Tasks.css';
 import { getTasks, updateTaskComplete, createTask } from './api/api.js'
 import { useAuth } from './AuthContext.js';
+
 function Tasks() {
 	const [error, setError] = useState('');
 	const [tasks, setTasks] = useState([]); //variable for retrieving tasks
-	const {userId} = useAuth();
+	const {userId} = useAuth(); //take userId from AuthContext
 	const [isWidgetVisible, setIsWidgetVisible] = useState(false); //Track widget visibility
 	const [isModalVisible, setIsModalVisible] = useState(false); //Track modal visibility
 	const [newTask, setNewTask] = useState({ //variable for creating new task
@@ -17,7 +18,7 @@ function Tasks() {
 	});
 
 
-	const fetchTasks = useCallback(async () => { 
+	const fetchTasks = useCallback(async () => { //useCallback to to stop infinite renders from userId call
 		try {
 			const data = await getTasks(userId);
 			setTasks(data.tasks);

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import "./Admin.css";
 
+
+//Didn't like the functionality of common drag-and-drop librarys, so made my own
+//through help of google
 function Admin({ navbarItems, setNavbarItems }) {
-  //To handle the drag start event, we'll store index of the dragged item
+  //To handle the drag start event, store index of the dragged item
   const [draggedIndex, setDraggedIndex] = useState(null);
 
   const handleDragStart = (index) => {
@@ -15,7 +18,7 @@ function Admin({ navbarItems, setNavbarItems }) {
 
   const handleDrop = (e, index) => {
     e.preventDefault();
-    if (draggedIndex === index) return; //If the item is dropped in the same place, do nothing
+    if (draggedIndex === index) return; //If the item is dropped in the same place do nothing
 
     const newItems = [...navbarItems];
     const draggedItem = newItems[draggedIndex];
@@ -56,9 +59,11 @@ function Admin({ navbarItems, setNavbarItems }) {
 
               <button
                 onClick={() => {
+                  if (item.title === "Admin") return; //to prevent user softlock
                   const newItems = [...navbarItems];
                   newItems[index].show = !newItems[index].show;
                   setNavbarItems(newItems);
+                  sessionStorage.setItem("navbarItems", JSON.stringify(newItems));
                 }}
                 className="show-button"
               >

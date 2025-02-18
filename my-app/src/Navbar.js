@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import './Navbar.css'
 import { useAuth } from './AuthContext';
 
-function Navbar({ navbarItems, handleLogout }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const { logout } = useAuth();
+function Navbar({ navbarItems }) {
+  const [isOpen, setIsOpen] = useState(false); //is navbar open variable
+  const { logout } = useAuth(); //get logout function from auth
   const location = useLocation(); //Get the current location
 
   return (

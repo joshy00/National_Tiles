@@ -6,14 +6,14 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { login } = useAuth();
+  const { login } = useAuth(); //get login function from authContext
 
   //function to authorize user login
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      login(username, password);
+      await login(username, password);
     } catch (err) {
       setError(err.message);
     }

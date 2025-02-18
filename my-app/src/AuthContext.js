@@ -48,10 +48,12 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  //handle variables on logout and remove auth from storage
   const logout = () => {
     setIsLoggedIn(false);
     setIsAdmin(false);
     setUserId(null);
+    sessionStorage.removeItem('navbarItems');
     localStorage.removeItem('auth');
   };
 

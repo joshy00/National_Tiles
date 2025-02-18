@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './UpdateUser.css'
+
 const UpdateUserModal = ({ user, onClose, onSubmit }) => {
 	const [formData, setFormData] = useState({ ...user });
 

@@ -10,7 +10,7 @@ import { useAuth } from './AuthContext.js';
 
 
 function App() {
-  const { isLoggedIn, isAdmin } = useAuth(); //get navbar variables from authcontext
+  const { isLoggedIn, isAdmin } = useAuth(); //get variables from authContext
   
 
   const [navbarItems, setNavbarItems] = useState([]); //initally set navbar to empty array
@@ -18,6 +18,7 @@ function App() {
 
   useEffect(() => {
     const storedNavbar = sessionStorage.getItem("navbarItems");
+    
     const initialItems = [ //Default layout of navbar
       { title: "Home", path: "/", show: true },
       { title: "Login", path: "/login", show: !isLoggedIn },
@@ -36,9 +37,9 @@ function App() {
   useEffect(() => {
     //Update navbar items when auth state changes
     setNavbarItems(prevItems => prevItems.map(item => {
-      if (item.title === "Login") return { ...item, show: !isLoggedIn };
-      if (item.title === "Logout") return { ...item, show: isLoggedIn };
-      if (item.title === "Admin" || item.title === "Users") return { ...item, show: isAdmin };
+      if (item.title === "Login") return { ...item, show: item.show };
+      if (item.title === "Logout") return { ...item, show: item.show };
+      if (item.title === "Admin" || item.title === "Users") return { ...item, show: item.show };
       return item;
     }));
   }, [isLoggedIn, isAdmin]);
