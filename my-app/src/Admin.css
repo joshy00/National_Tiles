@@ -1,52 +1,51 @@
 /* Styling for the Admin component */
 .admin-container {
-    margin-left: 20px;
-  }
-  
-  .admin-heading {
-    margin-left: 20px;
-  }
-  
-  .admin-subheading {
-    margin-left: 20px;
-  }
-  
-  .navbar-list {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .navbar-item {
-    padding: 10px;
-    margin: 5px;
-    border: none;
-    cursor: move;
-  }
-  
-  .navbar-item-content {
-    padding: 10px;
-    border: none;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 200px;
-    gap: 20px;
-  }
-  
-  .show-button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 5px 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .show-button:hover {
-    background-color: #45a049;
-  }
-  
+  margin-left: 20px;
+}
+
+.admin-heading {
+  margin-left: 20px;
+}
+
+.admin-subheading {
+  margin-left: 20px;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.navbar-item {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  cursor: move;
+}
+
+.navbar-item-content {
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  gap: 20px;
+}
+
+.show-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.show-button:hover {
+  background-color: #45a049;
+}

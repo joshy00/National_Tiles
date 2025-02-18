@@ -1,79 +1,76 @@
 .users-container {
-    width: 80%;
-    margin: 20px auto;
-    font-family: Arial, sans-serif;
-  }
-  
-  .users-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  
-  .users-header h2 {
-    margin: 0;
-  }
-  
-  .add-user-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .add-user-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .users-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .users-table th,
-  .users-table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-  }
-  
-  .users-table th {
-    background-color: #f4f4f4;
-  }
-  
-  .action-buttons {
-    display: flex;
-    gap: 5px;
-  }
-  
-  .edit-btn,
-  .delete-btn {
-    padding: 6px 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .edit-btn {
-    background-color: #ffc107;
-    color: black;
-  }
-  
-  .edit-btn:hover {
-    background-color: #e0a800;
-  }
-  
-  .delete-btn {
-    background-color: #dc3545;
-    color: white;
-  }
-  
-  .delete-btn:hover {
-    background-color: #c82333;
-  }
-  
+	width: 80%;
+	margin: 20px auto;
+	font-family: Arial, sans-serif;
+}
 
-  
+.users-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.users-header h2 {
+	margin: 0;
+}
+
+.add-user-btn {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	padding: 8px 12px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.add-user-btn:hover {
+	background-color: #0056b3;
+}
+
+.users-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+	padding: 10px;
+	border: 1px solid #ddd;
+	text-align: left;
+}
+
+.users-table th {
+	background-color: #f4f4f4;
+}
+
+.action-buttons {
+	display: flex;
+	gap: 5px;
+}
+
+.edit-btn,
+.delete-btn {
+	padding: 6px 10px;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.edit-btn {
+	background-color: #ffc107;
+	color: black;
+}
+
+.edit-btn:hover {
+	background-color: #e0a800;
+}
+
+.delete-btn {
+	background-color: #dc3545;
+	color: white;
+}
+
+.delete-btn:hover {
+	background-color: #c82333;
+}

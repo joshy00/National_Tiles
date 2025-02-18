@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './CreateUser.css'
 const CreateUser = ({ isCreateModalOpen, setIsCreateModalOpen, handleCreateUser }) => {
-  const [newUser, setNewUser] = useState({
+  const [newUser, setNewUser] = useState({ //set new user to empty values at page load
     FirstName: '',
     LastName: '',
     Dob: '',

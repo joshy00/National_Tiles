@@ -1,27 +1,19 @@
 import React, { useState } from "react";
-import "./Login.css"
+import "./Login.css";
+import { useAuth } from './AuthContext.js';
 
-function Login({ login }) {
+function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { login } = useAuth(); //get login function from authContext
 
-
-  //API call to authorize user login
+  //function to authorize user login
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
     try {
-      const response = await fetch("http://localhost:8080/api/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
-      });
-      const data = await response.json();
-      
-      if (!response.ok) throw new Error(data.message || "Login failed");
-      login(data);
+      await login(username, password);
     } catch (err) {
       setError(err.message);
     }
